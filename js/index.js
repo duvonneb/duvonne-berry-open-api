@@ -11,6 +11,12 @@ fetch(
     // Convert weather code to description
     const weatherDescription = weatherCodes[weatherCode];
 
+    //create weather paragraph element
+    const weatherSection = document.querySelector("#Weather");
+    const weatherParagraph = document.createElement("p");
+    weatherParagraph.innerHTML = `Current Temperature in Orlando: ${currentTemperature}°F <br> Weather Conditions: ${weatherDescription} <br> <button type="submit" onClick="refreshPage()">Refresh</button>`;
+    weatherSection.appendChild(weatherParagraph);
+
     // Log the information to the console
     console.log(`Current Temperature in Orlando: ${currentTemperature}°F`);
     console.log(`Weather: ${weatherDescription}`);
@@ -50,3 +56,7 @@ const weatherCodes = {
   96: "Thunderstorm with light hail",
   99: "Thunderstorm with heavy hail",
 };
+
+function refreshPage() {
+  window.location.reload();
+}
