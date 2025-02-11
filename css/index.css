@@ -24,3 +24,16 @@
   color: #fff;
 }
 /* End of navbar CSS */
+
+/* Format h1, h2 and p elements */
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: large;
+}
+
+p {
+  font-size: medium;
+}
