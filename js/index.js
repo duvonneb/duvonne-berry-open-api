@@ -11,11 +11,17 @@ fetch(
     // Convert weather code to description
     const weatherDescription = weatherCodes[weatherCode];
 
-    //create weather paragraph element
-    const weatherSection = document.querySelector("#Weather");
-    const weatherParagraph = document.createElement("p");
-    weatherParagraph.innerHTML = `Current Temperature in Orlando: ${currentTemperature}°F <br> Weather Conditions: ${weatherDescription} <br> <button type="submit" onClick="refreshPage()">Refresh</button>`;
-    weatherSection.appendChild(weatherParagraph);
+    //create tempature paragraph element
+    const tempSection = document.querySelector("#Tempature");
+    const tempParagraph = document.createElement("p");
+    tempParagraph.innerHTML = `Current Temperature in Orlando: ${currentTemperature}°F <br> <button type="submit" onClick="refreshPage()">Refresh</button>`;
+    tempSection.appendChild(tempParagraph);
+
+    //create condition paragraph element
+    const conditionSection = document.querySelector("#Condition");
+    const conditionParagraph = document.createElement("p");
+    conditionParagraph.innerHTML = `Weather Conditions: ${weatherDescription} <br> <button type="submit" onClick="refreshPage()">Refresh</button>`;
+    conditionSection.appendChild(conditionParagraph);
 
     // Log the information to the console
     console.log(`Current Temperature in Orlando: ${currentTemperature}°F`);
